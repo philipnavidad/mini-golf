@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Mini Golf</title>
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.4.2/dist/altspace.min.js"></script>
+</head>
+<body>
+	<a-assets>
+        <a-asset-item id="course" src="minigolf.dae"></a-asset-item>
+	</a-assets>    
+    <a-scene altspace="fullspace: true" sync-system="author: altspacevr; app: sound-sync-soundboard">
+        <a-entity collada-model="#course" position="0 0 0" n-mesh-collider="type:environment; convex: false"></a-entity>
+    </a-scene>
+</body>
+</html>
